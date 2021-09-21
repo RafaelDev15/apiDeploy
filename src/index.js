@@ -16,7 +16,7 @@ class App{
             useUnifiedTopology: true
         });
 
-        this.server.listen(3333);
+        this.server.listen( process.env.PORT || 3333);
 
         this.middlewares();
         this.routes();
