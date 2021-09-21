@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const routes = require('./routes');
 const path = require('path');
-const cors = require
+const cors = require('cors');
 require('dotenv').config();
 
 
@@ -23,6 +23,8 @@ class App{
     }
 
     middlewares(){
+
+        this.server.use(cors());
 
         this.server.use(
             '/files',
